@@ -143,8 +143,9 @@ TARGET_USES_MKE2FS := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 
 # Super
 BOARD_SUPER_PARTITION_SIZE := 9763291136
@@ -185,4 +186,4 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-include vendor/motorola/sm6115-common/BoardConfigVendor.mk
+#include vendor/motorola/sm6115-common/BoardConfigVendor.mk

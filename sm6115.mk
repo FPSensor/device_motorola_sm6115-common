@@ -363,4 +363,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/motorola/sm6115-common/sm6115-common-vendor.mk)
+#$(call inherit-product, vendor/motorola/sm6115-common/sm6115-common-vendor.mk)
